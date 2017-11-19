@@ -1,0 +1,18 @@
+Sincronizarea proceselor 
+
+Mecanisme de sincronizare.
+1) sectiunea critica -> Declar si initializez CRITICAL_SECTION
+		    	->scrie un thread -> intra in "CRITICAL_SECTION"
+  			->termina de scris -> leave "CRITICAL_SECTION"
+			->cat primul este in "CRITICAL_SECTION", celalalt asteapta leave
+
+
+2) Mutex -> la fel ca sectiunea critica doar ca are wait
+	  -> asigura sincronizarea la resursa, nu sincronizeaza intre ele procesele
+
+hint tema : sa salvam toate numerele ce trebuie verificate
+
+3) Semaforul ->  poate sa lase un numar de x threaduri sa acceseze resursa
+
+
+4Event -> sincronizeaza si accesul la resursa si threadurile in tre ele
